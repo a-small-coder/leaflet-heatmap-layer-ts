@@ -1,0 +1,9 @@
+.leaflet-container {
+  /* Hide map figma crop */
+  background: #f5f5f5;
+  outline: 0;
+}
+
+.map {
+  height: 100vh;
+}

@@ -1,0 +1,62 @@
+{
+  "name": "leaflet-heatmap-layer-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "dependencies": {},
+  "scripts": {
+    "dev": "webpack --env development --watch",
+    "build": "webpack --env production",
+    "docs": "jsdoc2md --template ./README.hbs --files ./src/lib/*.ts --configure ./jsdoc2md.json > ./README.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-webpack-plugin": "^3.1.1",
+    "jsdoc-babel": "^0.5.0",
+    "jsdoc-to-markdown": "^7.1.1",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@types/leaflet": "^1.7.11",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "framer-motion": "^6",
+    "leaflet": "1.8.0",
+    "leaflet.heat": "^0.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-leaflet": "^4.0.0",
+    "react-scripts": "5.0.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "@chakra-ui/react": "*",
+    "leaflet": "*"
+  },
+  "browserslist": [
+    ">0.2%",
+   "not dead",
+   "not op_mini all"
+ ]
+}
