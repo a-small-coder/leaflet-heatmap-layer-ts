@@ -1,4 +1,4 @@
-import { type Dispatch, type SetStateAction, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import l from 'leaflet'
 import 'leaflet.heat'
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 // Styles
 import 'leaflet/dist/leaflet.css'
 import '../styles/leafletStyles.css'
+import { LeafletMapProps, MapInfoProps } from '../interfaces'
 
 export default function LeafletMap({ layerData, tileLayerImg }: LeafletMapProps) {
   const [center, setCenter] = useState<{ x: number; y: number }>({
@@ -46,22 +47,4 @@ function MapInfo({ setCenter, setZoom, layerData }: MapInfoProps) {
     L.heatLayer(layerData).addTo(map)
   }, [map, layerData])
   return null
-}
-
-// Types
-interface MapInfoProps {
-  setZoom: Dispatch<number>
-  setCenter: Dispatch<SetStateAction<{ x: number; y: number }>>
-  layerData: ILayerPoit[]
-}
-
-interface LeafletMapProps {
-  layerData: ILayerPoit[]
-  tileLayerImg: string
-}
-
-export interface ILayerPoit {
-  x: number 
-  y: number 
-  value: number
 }

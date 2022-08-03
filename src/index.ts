@@ -1,3 +1,1 @@
-import Heatmap from "./lib/Heatmap";
-
-export default Heatmap
+export * from "./lib/Heatmap";
