@@ -43,8 +43,11 @@ function MapInfo({ setCenter, setZoom, layerData }: MapInfoProps) {
 
   // Тепловая карта
   useEffect(() => {
+    const layer= layerData.map( lay => (
+      [lay.y, lay.x, lay.value]
+    ))
     // @ts-ignore
-    L.heatLayer(layerData).addTo(map)
+    L.heatLayer(layer).addTo(map)
   }, [map, layerData])
   return null
 }

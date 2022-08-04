@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'production',
-    entry: './src/index.ts',
+    entry: './src/index.tsx',
     output: {
         filename: "index.js",
         path: path.resolve(__dirname, 'dist'),
@@ -14,9 +14,9 @@ module.exports = {
         extensions: ['.ts', '.tsx']
     },
     externals: {
-      react: 'react',
-      'react-dom': 'reactDOM',
-      '@chakra-ui/react': 'chakraUiReact',
+      'react': 'react',
+      'react-dom': 'react-dom',
+      '@chakra-ui/react': '@chakra-ui/react',
     },
     module: {
         rules: [
@@ -27,8 +27,8 @@ module.exports = {
             {
                 test: /\.(ts|tsx)?$/,
                 use: ['ts-loader'],
-                exclude: /node_modules/
-            }
+                exclude: [/node_modules/, /dist/]
+            },
         ],
     }
 }
